@@ -66,7 +66,7 @@
 @include('productos.flotantes.crear')
 
 <script>
-    const productos = @json($productos);
+    const productos = @json($productos->items());
 
     function abrirDetalle(id) {
         const p = productos.find(x => x.id === id);
