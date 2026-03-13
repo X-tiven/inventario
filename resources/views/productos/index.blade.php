@@ -80,7 +80,7 @@
         const ph  = document.getElementById('detallePlaceholder');
 
         if (p.imagen) {
-            img.src = '/storage/' + p.imagen;
+            img.src = '{{ asset("storage/") }}/' + p.imagen;
             img.classList.remove('hidden');
             ph.classList.add('hidden');
             img.onerror = () => { img.classList.add('hidden'); ph.classList.remove('hidden'); };
