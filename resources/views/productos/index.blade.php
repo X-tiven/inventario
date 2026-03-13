@@ -55,6 +55,11 @@
             </div>
         @endforelse
     </div>
+    @if($productos->hasPages())
+    <div class="mt-8 flex justify-center">
+        {{ $productos->links() }}
+    </div>
+@endif
 </main>
 
 @include('productos.flotantes.detalle')
